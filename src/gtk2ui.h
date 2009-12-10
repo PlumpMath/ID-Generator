@@ -3,20 +3,7 @@
 
 #include <gtk/gtk.h>
 
-GtkWidget *cbox_sex; 
-GtkWidget *cbox_area;
-GtkWidget *lineEdit; 
-GtkWidget *label_id; 
-GtkWidget *label_sex;
-GtkWidget *label_area;
-GtkWidget *btn_check;
-GtkWidget *btn_gen;  
-GtkWidget *vbox;     
-GtkWidget *hbox1;    
-GtkWidget *hbox2;    
-GtkWidget *MainWindow;
-
-// public method
+/* Declare Public Methods*/
 void setupUi(GtkWidget *window);
 
 

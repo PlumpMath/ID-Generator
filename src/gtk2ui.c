@@ -1,7 +1,21 @@
 #include "gtk2ui.h"
 #include "idgen.h"
 
-/* private method */
+/* Global Variables */
+static GtkWidget *cbox_sex; 
+static GtkWidget *cbox_area;
+static GtkWidget *lineEdit; 
+static GtkWidget *label_id; 
+static GtkWidget *label_sex;
+static GtkWidget *label_area;
+static GtkWidget *btn_check;
+static GtkWidget *btn_gen;  
+static GtkWidget *vbox;     
+static GtkWidget *hbox1;    
+static GtkWidget *hbox2;    
+static GtkWidget *MainWindow;
+
+/* Declare Private Method */
 static void setup_comboBox( void );
 static void setup_signal( void );
 static void launch_idgen( GtkWidget *widget );
