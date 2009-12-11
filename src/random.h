@@ -11,6 +11,7 @@
 
 unsigned int randgen( unsigned int max );
 char rand_digit(void);
+char rand_letter(void);
 char rand_letter_upcase(void);
 char rand_letter_downcase(void);
 

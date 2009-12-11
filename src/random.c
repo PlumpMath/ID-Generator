@@ -60,17 +60,25 @@ unsigned int randgen( unsigned int max )
 
 #endif /* defined( __unix__ ) */
 
-
+/* Generate random digit */
 char rand_digit(void)
 {
         return "0123456789"[randgen(10)];
 }
 
+/* Generate random letter in upcase */
+char rand_letter(void)
+{
+        return "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"[randgen(52)];
+}
+
+/* Generate random letter in upcase */
 char rand_letter_upcase(void)
 {
         return "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[randgen(26)];
 }
 
+/* Generate random letter in downcase */
 char rand_letter_downcase(void)
 {
         return "abcdefghijklmnopqrstuvwxyz"[randgen(26)];
