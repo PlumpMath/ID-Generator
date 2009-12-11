@@ -46,7 +46,7 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_idgen_OBJECTS = idgen-idgen.$(OBJEXT) idgen-gtk2ui.$(OBJEXT) \
-	idgen-main.$(OBJEXT)
+	idgen-random.$(OBJEXT) idgen-main.$(OBJEXT)
 idgen_OBJECTS = $(am_idgen_OBJECTS)
 am__DEPENDENCIES_1 =
 idgen_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -162,6 +162,7 @@ idgen_CFLAGS = $(GTK_CFLAGS)
 idgen_LDADD = $(GTK_LIBS) $(INTLLIBS)
 idgen_SOURCES = idgen.h idgen.c \
                 gtk2ui.h gtk2ui.c \
+                random.h random.c \
                 main.c
 
 all: all-am
@@ -248,6 +249,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/idgen-gtk2ui.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/idgen-idgen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/idgen-main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/idgen-random.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -290,6 +292,20 @@ idgen-gtk2ui.obj: gtk2ui.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='gtk2ui.c' object='idgen-gtk2ui.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(idgen_CFLAGS) $(CFLAGS) -c -o idgen-gtk2ui.obj `if test -f 'gtk2ui.c'; then $(CYGPATH_W) 'gtk2ui.c'; else $(CYGPATH_W) '$(srcdir)/gtk2ui.c'; fi`
+
+idgen-random.o: random.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(idgen_CFLAGS) $(CFLAGS) -MT idgen-random.o -MD -MP -MF $(DEPDIR)/idgen-random.Tpo -c -o idgen-random.o `test -f 'random.c' || echo '$(srcdir)/'`random.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/idgen-random.Tpo $(DEPDIR)/idgen-random.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='random.c' object='idgen-random.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(idgen_CFLAGS) $(CFLAGS) -c -o idgen-random.o `test -f 'random.c' || echo '$(srcdir)/'`random.c
+
+idgen-random.obj: random.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(idgen_CFLAGS) $(CFLAGS) -MT idgen-random.obj -MD -MP -MF $(DEPDIR)/idgen-random.Tpo -c -o idgen-random.obj `if test -f 'random.c'; then $(CYGPATH_W) 'random.c'; else $(CYGPATH_W) '$(srcdir)/random.c'; fi`
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/idgen-random.Tpo $(DEPDIR)/idgen-random.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='random.c' object='idgen-random.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(idgen_CFLAGS) $(CFLAGS) -c -o idgen-random.obj `if test -f 'random.c'; then $(CYGPATH_W) 'random.c'; else $(CYGPATH_W) '$(srcdir)/random.c'; fi`
 
 idgen-main.o: main.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(idgen_CFLAGS) $(CFLAGS) -MT idgen-main.o -MD -MP -MF $(DEPDIR)/idgen-main.Tpo -c -o idgen-main.o `test -f 'main.c' || echo '$(srcdir)/'`main.c

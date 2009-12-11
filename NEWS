@@ -1,0 +1,4 @@
+
+Version 0.1.2 :
+
+	Use /dev/random to generate more random ID

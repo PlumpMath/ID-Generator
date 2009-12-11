@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "idgen.h"
+#include "random.h"
 
 static const int area[26] = {
         10, 11, 12, 13, 14, 15, 16, 17, 34,
@@ -21,18 +22,18 @@ char * idgen( int country, int sex )
         int checksum = 0, count = 7, i = 0;
         char *ID = ( char * ) malloc( sizeof( char * ) * 10 + 1 );
 
-        srand( ( unsigned ) time( NULL ) );
         
         /* 如果性別的選項為 "隨機" */
         if ( 0 == sex ) {
-                sex = rand() % 2 + 1;
+                sex = randgen(2) + 1;
         }
         /* 如果城市的選項為 "隨機" */
         if ( 0 == country ) {
-                country = rand() % 26 + 1;
+                country = randgen(26) + 1;
         }
 
         i = country - 1;
+
         ID[0] = country + 'A' - 1;
         ID[1] = sex + '0';
 
@@ -42,7 +43,7 @@ char * idgen( int country, int sex )
         checksum += ( area[i] / 10 ) + ( area[i] % 10 ) * 9;
 
         for( i = 2; i < 9; i++ ) {
-                ID[i] = rand() % 10 + '0';
+                ID[i] = randgen(10) + '0';
         }
 
         for( i = 2; i < 9; i++ ) {

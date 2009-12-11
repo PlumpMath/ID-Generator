@@ -2,8 +2,6 @@
 #include "idgen.h"
 
 /* Global Variables */
-static GtkWidget *cbox_sex; 
-static GtkWidget *cbox_area;
 static GtkWidget *lineEdit; 
 static GtkWidget *label_id; 
 static GtkWidget *label_sex;
@@ -14,6 +12,8 @@ static GtkWidget *vbox;
 static GtkWidget *hbox1;    
 static GtkWidget *hbox2;    
 static GtkWidget *MainWindow;
+static GtkWidget *cbox_sex; 
+static GtkWidget *cbox_area;
 
 /* Declare Private Method */
 static void setup_comboBox( void );
@@ -93,8 +93,8 @@ void launch_idgen(GtkWidget *widget)
 {
         gchar *ID;
         gint sex, country;
-        sex = gtk_combo_box_get_active( cbox_sex );
-        country = gtk_combo_box_get_active( cbox_area );
+        sex = gtk_combo_box_get_active( GTK_COMBO_BOX( cbox_sex ) );
+        country = gtk_combo_box_get_active( GTK_COMBO_BOX( cbox_area ) );
         ID = idgen( country, sex );
         gtk_entry_set_text( GTK_ENTRY( lineEdit ), ( gchar * ) ID );
 }
