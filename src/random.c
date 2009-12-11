@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <errno.h>
 #include "random.h"
 
@@ -19,7 +18,7 @@ int get_random_fd( void )
                         rand_fd = open( "/dev/random", O_RDONLY | O_NONBLOCK );
                 }
                 if ( rand_fd < 0 ) {
-                        perror( "open /dev/random and /dev/urandom dailed" );
+                        perror( "open /dev/random and /dev/urandom failed" );
                         exit( EXIT_FAILURE );
                 }
         }
@@ -48,7 +47,6 @@ unsigned int randgen( unsigned int max )
         } while ( val >= max + getpid() );
 
         return val % max;
-
 }
 
 #else
