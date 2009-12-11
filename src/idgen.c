@@ -21,7 +21,6 @@ char * idgen( int country, int sex )
 {
         int checksum = 0, count = 7, i = 0;
         char *ID = ( char * ) malloc( sizeof( char * ) * 10 + 1 );
-
         
         /* 如果性別的選項為 "隨機" */
         if ( 0 == sex ) {
@@ -43,7 +42,7 @@ char * idgen( int country, int sex )
         checksum += ( area[i] / 10 ) + ( area[i] % 10 ) * 9;
 
         for( i = 2; i < 9; i++ ) {
-                ID[i] = randgen(10) + '0';
+                ID[i] = rand_digit();
         }
 
         for( i = 2; i < 9; i++ ) {

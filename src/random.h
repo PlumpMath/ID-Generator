@@ -10,6 +10,9 @@
 #endif /* defined( __unix__ ) */
 
 unsigned int randgen( unsigned int max );
+char rand_digit(void);
+char rand_letter_upcase(void);
+char rand_letter_downcase(void);
 
 #endif /* _ID_RANDOM_H */
 
