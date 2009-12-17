@@ -1,3 +1,13 @@
+/**
+ * @file   random.c
+ * @author Yen-Chin,Lee <coldnew.tw@gmail.com>
+ * @date   Wed Dec 16 12:41:45 2009
+ * 
+ * @brief  產生隨機變數
+ * 
+ * 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -6,7 +16,12 @@
 #if defined( __unix__ )
 
 static int get_random_fd( void );
-
+/** 
+ * 讀取隨機
+ * 
+ * 
+ * @return 
+ */
 int get_random_fd( void )
 {
         static int rand_fd = -1;
@@ -25,7 +40,13 @@ int get_random_fd( void )
         
         return rand_fd;
 }
-
+/** 
+ * 製造隨機變數
+ * 
+ * @param max sadadsadsa
+ * 
+ * @return jojo
+ */
 unsigned int randgen( unsigned int max )
 {
         int fd = get_random_fd();

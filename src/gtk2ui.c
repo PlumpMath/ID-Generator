@@ -20,13 +20,19 @@ static void setup_comboBox( void );
 static void setup_signal( void );
 static void launch_idgen( GtkWidget *widget );
 
-void setupUi( GtkWidget *window )
+/** 
+ * Create the Main Frame
+ * 
+ * @param window   A GtkWindow that you want to create
+ */
+void setupMainFrame( GtkWidget *window )
 {
         MainWindow = window;
         
         gtk_window_set_title( GTK_WINDOW( window ), "身份證字號產生器" );
         gtk_window_set_position( GTK_WINDOW( window ), GTK_WIN_POS_CENTER );
         gtk_window_set_default_size( GTK_WINDOW( window ), 325, 100 );
+        gtk_window_set_resizable(GTK_WINDOW(window), FALSE);
 
         gtk_container_set_border_width( GTK_CONTAINER( window ), 15 );
 
@@ -64,10 +70,10 @@ void setupUi( GtkWidget *window )
         /* 佈局管理 */
         gtk_box_pack_start( GTK_BOX( hbox1 ), label_id, FALSE, FALSE, 0 );
         gtk_box_pack_start( GTK_BOX( hbox1 ), lineEdit, FALSE, FALSE, 0 );
-        gtk_box_pack_end( GTK_BOX( hbox1 ), btn_gen, FALSE, FALSE, 0 );
+        gtk_box_pack_start( GTK_BOX( hbox1 ), btn_gen, FALSE, FALSE, 0 );
 
         gtk_box_pack_start( GTK_BOX( vbox ), hbox1, FALSE, FALSE, 0 );
-        gtk_box_pack_end( GTK_BOX( vbox ), hbox2, FALSE, FALSE, 5 );
+        gtk_box_pack_start( GTK_BOX( vbox ), hbox2, FALSE, FALSE, 0 );
 
         gtk_box_pack_end( GTK_BOX( hbox2 ), cbox_area, FALSE, FALSE, 0 );
         gtk_box_pack_end( GTK_BOX( hbox2 ), label_area, FALSE, FALSE, 0 );
@@ -76,12 +82,10 @@ void setupUi( GtkWidget *window )
 
         setup_comboBox();
         setup_signal();
-        
 }
 
 void setup_signal( void )
 {
-        /* 使叉叉按鈕能夠關閉視窗 */
         g_signal_connect( GTK_OBJECT( MainWindow ), "destroy",
                          G_CALLBACK( gtk_main_quit ), NULL );
 

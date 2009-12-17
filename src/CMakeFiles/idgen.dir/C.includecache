@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/coldnew/WorkSpace/release/idgen/src/gtk2ui.h
+gtk/gtk.h
+-
+
+/home/coldnew/WorkSpace/release/idgen/src/main.c
+stdio.h
+-
+stdlib.h
+-
+gtk/gtk.h
+-
+gtk2ui.h
+/home/coldnew/WorkSpace/release/idgen/src/gtk2ui.h
+

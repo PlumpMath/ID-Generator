@@ -10,13 +10,6 @@ static const int area[26] = {
         26, 27, 28, 29, 30, 31, 32, 33
 };
 
-/**
- * 產生身份證字號
- *
- * @param country
- * @param sex
- *
- */
 char * idgen( int country, int sex )
 {
         int checksum = 0, count = 7, i = 0;
