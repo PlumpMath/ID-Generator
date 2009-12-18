@@ -99,7 +99,7 @@ void launch_idgen(GtkWidget *widget)
         gint sex, country;
         sex = gtk_combo_box_get_active( GTK_COMBO_BOX( cbox_sex ) );
         country = gtk_combo_box_get_active( GTK_COMBO_BOX( cbox_area ) );
-        ID = idgen( country, sex );
+        ID = idgen_for_Taiwan( country, sex );
         gtk_entry_set_text( GTK_ENTRY( lineEdit ), ( gchar * ) ID );
 }
 

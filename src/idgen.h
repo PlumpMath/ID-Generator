@@ -20,7 +20,7 @@
  *
  * @return        An ID in String type
  */
-char * idgen(int country, int sex);
+char * idgen_for_Taiwan(int country, int sex);
 
 #endif /* _ID_GEN_H */
 

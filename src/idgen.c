@@ -15,7 +15,7 @@ static const int weight[9] = {
 };
 
 
-char * idgen( int country, int sex )
+char * idgen_for_Taiwan( int country, int sex )
 {
         int checksum = 0, i = 0;
         char *ID = ( char * ) malloc( sizeof( char * ) * 10 + 1 );
