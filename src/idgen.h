@@ -13,22 +13,12 @@
 #define _ID_GEN_H
 
 /**
- * \~english
  * @brief Generate the ID in Taiwan 
  *
  * @param country country
  * @param sex     sex
  *
  * @return        An ID in String type
- */
-/** 
- * \~chinese
- * @brief 產生
- * 
- * @param country 登記地
- * @param sex     性別
- * 
- * @return 身份證字號
  */
 char * idgen(int country, int sex);
 

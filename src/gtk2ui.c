@@ -107,38 +107,38 @@ void setup_comboBox(void)
 {
         /* comboBox sex */
         gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_sex ), "隨機產生" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_sex ), "男性" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_sex ), "女性" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_sex ), "男性 (1)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_sex ), "女性 (2)" );
         gtk_combo_box_set_active( GTK_COMBO_BOX( cbox_sex ), 0 );
 
         /* comboBox area */
         gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "隨機產生" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台北市" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台中市" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "基隆市" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台南市" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "高雄市" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台北縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "宜蘭縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "桃園縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "嘉義市" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "新竹縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "苗栗縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台中縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "南投縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "彰化縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "新竹市" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "雲林縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "嘉義縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台南縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "高雄縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "屏東縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "花蓮縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台東縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "金門縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "澎湖縣" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "陽明山" );
-        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "連江縣" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台北市 (A)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台中市 (B)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "基隆市 (C)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台南市 (D)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "高雄市 (E)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台北縣 (F)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "宜蘭縣 (G)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "桃園縣 (H)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "嘉義市 (I)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "新竹縣 (J)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "苗栗縣 (K)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台中縣 (L)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "南投縣 (M)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "彰化縣 (N)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "新竹市 (O)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "雲林縣 (P)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "嘉義縣 (Q)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台南縣 (R)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "高雄縣 (S)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "屏東縣 (T)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "花蓮縣 (U)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "台東縣 (V)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "金門縣 (W)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "澎湖縣 (X)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "陽明山 (Y)" );
+        gtk_combo_box_append_text( GTK_COMBO_BOX( cbox_area ), "連江縣 (z)" );
         gtk_combo_box_set_active( GTK_COMBO_BOX( cbox_area ), 0 );
 }
 

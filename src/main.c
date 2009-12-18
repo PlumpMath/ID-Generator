@@ -3,7 +3,6 @@
 #include <gtk/gtk.h>
 #include "gtk2ui.h"
 
-
 int main( int argc, char **argv )
 {
         GtkWidget *window;      /* Main Window */

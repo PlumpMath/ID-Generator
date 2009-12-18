@@ -1,7 +1,9 @@
 
 Change Log
 ------------------------------------------------------------
+0.1.4 : Add new function
 0.1.3 : Make the Main Window can't be resize
+	discard autotools and use cmake to compile the program
 0.1.2 : For UNIX environment, use /dev/random to generate random number
-0.1.1 : bug fix
+0.1.1 : Bug Fix
 0.1.0 : first release
